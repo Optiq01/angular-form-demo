@@ -1,0 +1,27 @@
+<article [formGroup]="AttributeFormData" class="duo-text-control-section">
+
+
+    <label class="duo-control-label">
+
+        <p class="articleText">attribute:</p>
+        <input
+            type="text"
+            class="duo-text-control"
+            [formControl]="AttributeFormData.controls.attribute"
+        />
+        
+    </label>
+    
+    <label class="duo-control-label">
+
+        <p class="smallText">setting:</p>
+        <input
+            type="text"
+            class="duo-text-control"
+            [formControl]="AttributeFormData.controls.setting"
+        />
+
+    </label>
+    
+    
+</article>
