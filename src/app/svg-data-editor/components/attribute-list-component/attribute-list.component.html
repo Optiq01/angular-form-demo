@@ -1,0 +1,33 @@
+<section [formGroup]="AttributeListData">
+
+    <article *ngIf="!AttributeListData">
+        <p>loading</p>
+    </article>
+
+    <article *ngIf="AttributeListData">
+
+        <h5 *ngIf="AttributeListData.controls.length === 0" class="articleText">no attributes</h5>
+
+        <section *ngIf="AttributeListData.controls.length > 0">
+
+            <article *ngFor="let item of AttributeListData.controls; let i = index" class="list-grid">
+                
+                <p class="index-area articleText">{{i}}</p>
+
+                <attribute-form-component [formControlName]="item" class="component-area"></attribute-form-component>
+
+                <article class="delete-area">
+                    <button (click)="deleteAttribute(i)">delete</button>
+                </article>
+                
+            </article>
+        
+        </section>
+
+    </article>
+
+    <article>
+        <button (click)="addAttribute()">add</button>
+    </article>
+
+</section>
