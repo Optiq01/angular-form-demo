@@ -1,5 +1,5 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { OvaadSvgStyleProperty }              from '@interfaces/interfaces';
+import { OvaadSvgStyleProperty }              from '../../interfaces';
 
 export function CreateStylePropertyForm(data?: OvaadSvgStyleProperty): FormGroup{
     return new FormGroup({

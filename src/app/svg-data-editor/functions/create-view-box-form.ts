@@ -1,5 +1,5 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ViewBoxParameters }                  from '@interfaces/interfaces';
+import { ViewBoxParameters }                  from '../../interfaces';
 
 export function CreateViewBoxForm(data?: ViewBoxParameters): FormGroup{
     return new FormGroup({

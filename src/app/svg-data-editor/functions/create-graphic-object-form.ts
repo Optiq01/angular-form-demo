@@ -1,10 +1,10 @@
 import { FormGroup, FormArray, FormControl, Validators }                                        from '@angular/forms';
-import { OvaadSvgDataObject, OvaadGraphicAttribute, OvaadSvgStyleProperty, OvaadGraphicObject } from '@interfaces/interfaces';
+import { OvaadSvgDataObject, OvaadGraphicAttribute, OvaadSvgStyleProperty, OvaadGraphicObject } from '../../interfaces';
 
-import { CreateAttributeForm }      from '../create-attribute-form/create-attribute-form';
-import { CreateStylePropertyForm }  from '../create-style-property-form/create-style-property-form';
-import { CreateGraphicElementForm } from '../create-graphic-element-form/create-graphic-element-form';
-import { CreateViewBoxForm }        from '../create-view-box-form/create-view-box-form';
+import { CreateAttributeForm }      from './create-attribute-form';
+import { CreateStylePropertyForm }  from './create-style-property-form';
+import { CreateGraphicElementForm } from './create-graphic-element-form';
+import { CreateViewBoxForm }        from './create-view-box-form';
 
 
 

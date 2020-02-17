@@ -1,8 +1,8 @@
 import { FormGroup, FormControl, FormArray, Validators }                    from '@angular/forms';
-import { OvaadSvgStyleProperty, OvaadGraphicAttribute, OvaadGraphicObject } from '@interfaces/interfaces';
+import { OvaadSvgStyleProperty, OvaadGraphicAttribute, OvaadGraphicObject } from '../../interfaces';
 
-import { CreateAttributeForm }     from '../create-attribute-form/create-attribute-form';
-import { CreateStylePropertyForm } from '../create-style-property-form/create-style-property-form';
+import { CreateAttributeForm }     from './create-attribute-form';
+import { CreateStylePropertyForm } from './create-style-property-form';
 
 
 

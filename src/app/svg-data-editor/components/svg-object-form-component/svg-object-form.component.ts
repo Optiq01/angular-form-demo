@@ -1,6 +1,6 @@
 import { Component, OnInit, Input,forwardRef, OnChanges } from '@angular/core';
-import {OvaadSvgDataObject} from '../../../interfaces/interfaces';
-import {FormGroup, FormControl, FormArray, } from '@angular/forms';
+import {OvaadSvgDataObject} from '../../../interfaces';
+import {FormGroup, FormControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'svg-object-form-component',
