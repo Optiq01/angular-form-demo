@@ -1,0 +1,9 @@
+<section class="editor-grid">
+
+    <h2 *ngIf="!DataPresent">loading...</h2>
+    
+    <ng-container *ngIf="DataPresent">
+        <svg-object-form-component [SvgFormData]="SvgForm"></svg-object-form-component>
+    </ng-container>
+
+</section> 

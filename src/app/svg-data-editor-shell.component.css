@@ -1,0 +1,12 @@
+.editor-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+}
+
+svg-object-form-component{
+    width: 100%;
+    height: auto;
+}
