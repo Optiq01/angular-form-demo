@@ -1,0 +1,30 @@
+<section>
+
+    <article *ngIf="!StylePropertyListData">
+        <p>loading</p>
+    </article>
+
+    <article *ngIf="StylePropertyListData">
+
+        <h5 *ngIf="StylePropertyListData.controls.length === 0" class="articleText">no styling</h5>
+
+        <section formArrayName="StylePropertyListData" *ngIf="StylePropertyListData.controls.length > 0">
+
+            <article *ngFor="let item of StylePropertyListData.controls; let i = index" class="list-grid">
+                <p class="index-area articleText">{{i}}</p>
+                <property-form-component  [PropertyFormData]="item" class="component-area"></property-form-component>
+                <article class="delete-area">
+                    <button (click)="deleteProperty(i)">delete</button>
+                </article>
+                
+            </article>
+        
+        </section>
+
+    </article>
+
+    <article>
+        <button (click)="addProperty()">add</button>
+    </article>
+
+</section>
