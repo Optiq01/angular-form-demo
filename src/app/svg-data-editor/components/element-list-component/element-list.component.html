@@ -1,0 +1,35 @@
+<section [formGroup]="ElementListData">
+    
+
+    <article *ngIf="!ElementListData">
+        <p>loading</p>
+    </article>
+
+    <article *ngIf="ElementListData">
+
+        <h5 *ngIf="ElementListData.controls.length === 0" class="articleText">no elements</h5>
+
+        <section *ngIf="ElementListData.controls.length > 0">
+
+            <article *ngFor="let item of ElementListData.controls; let i = index" class="list-grid">
+
+                <p class="index-area articleText">{{i}}</p>
+
+                <element-form-component formGroupName="item" class="component-area"></element-form-component>
+
+                <article class="delete-area">
+                    <button (click)="deleteElement(i)">delete</button>
+                </article>
+
+                
+            </article>
+        
+        </section>
+
+    </article>
+
+    <article>
+        <button (click)="addElement()">add</button>
+    </article>
+
+</section>
