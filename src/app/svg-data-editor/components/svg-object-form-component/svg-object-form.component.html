@@ -1,0 +1,43 @@
+<form [formGroup]="SvgFormData" (ngSubmit)="onSubmit()">
+
+
+    <section class="text-control-section">
+
+        <label class="control-label">
+            <p class="articleText">title:</p>
+            <input class="text-control" type="text" formControlName="title" />
+            <!--<input class="text-control" type="text" [(ngModel)]="SvgFormData.controls.title[0]" [ngModelOptions]="{standalone: true}" />-->
+        </label>
+        
+        <label class="control-label">
+            <p class="articleText">graphic id:</p>
+            <input class="text-control" type="text" formControlName="graphicId" />
+            <!--<input class="text-control" type="text" [(ngModel)]="SvgFormData.controls.graphicId[0]" [ngModelOptions]="{standalone: true}" />-->
+        </label>
+        
+    </section>
+
+    <section class="component-grid">
+        <h3>ViewBox Settings</h3>
+        <view-box-form-component formGroupName="viewBox"></view-box-form-component>
+    </section>
+
+    <section class="component-grid">
+        <h3>Core Attributes</h3>
+        <attribute-list-component formArrayName="coreAttributes"></attribute-list-component>
+    </section>
+
+    <section formArrayName="coreStyles" class="component-grid">
+        <h3>Core Styles</h3>
+        <style-list-component [StylePropertyListData]="SvgFormData.controls.coreStyles"></style-list-component>
+    </section>
+    
+    <section formArrayName="elements" class="component-grid">
+        <h3>Elements</h3>
+        <element-list-component formArrayName="elements"></element-list-component>
+    </section>
+
+    <input type="submit" class="submit-button smallText" value="save"/>
+
+
+</form>
