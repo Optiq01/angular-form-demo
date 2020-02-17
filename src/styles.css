@@ -1,1 +1,386 @@
-/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --grWhole: 1.6180339887498948;
+
+    --gr1:    .1458980338px;
+    --gr2:    .2016261238px;
+    --gr3:    .2360679775px;
+    --gr4:    .3262379212px;
+    --gr5:    .3819660113px;
+    --gr6:    .527864045px;
+    --gr7:    .6180339888px;
+    --gr8:    .8541019663px;
+    --gr9:    1px;
+    --gr10:   1.381966011px;
+    --gr11:   var(--grWhole);
+    --gr12:   2.236067978px;
+    --gr13:   2.618033989px;
+    --gr14:   3.618033989px;
+    --gr15:   4.236067977px;
+    --gr16:   5.854101966px;
+    --gr17:   6.854101966px;
+    --gr18:   9.472135955px;
+    --gr19:   11.09016994px;
+    --gr20:   15.32623792px;
+    --gr21:   17.94427191px;
+    --gr22:   24.79837388px;
+    --gr23:   29.03444185px;
+    --gr24:   40.1246118px;
+    --gr25:   46.97871376px;
+    --gr26:   64.02208567px;
+    --gr27:   76.01315562px;
+    --gr28:   105.0475975px;
+    --gr29:   122.9918694px;
+    --gr30:   169.9705831px;
+    --gr31:   199.005025px;
+    --gr32:   275.0181806px;
+    --gr33:   321.9968944px;
+    --gr34:   444.9887638px;
+    --gr35:   521.0019194px;
+    --gr36:   720.0069444px;
+    --gr37:   842.9988138px;
+    --gr38:   1164.995708px;
+    --gr39:   1364.000733px;
+    --gr40:   1885.002652px;
+    --gr41:   2206.999547px;
+    --gr42:   3049.998361px;
+    --gr43:   3571.00028px;
+    --gr44:   4935.001014px;
+    --gr45:   5777.999827px;
+
+
+
+
+
+    --screenWidth:  calc(calc(100vw - 1px) + 1px);
+    --screenHeight: calc(calc(100vh - 1px) + 1px);
+
+
+    --widthScaleNumber:  5.854101966;
+    --heightScaleNumber: 5.854101966;
+
+    --widthCore:         calc(calc(var(--screenWidth) / var(--grWhole)) / var(--widthScaleNumber));
+    --heightCore:        calc(calc(var(--screenHeight) / var(--grWhole)) / var(--heightScaleNumber));
+    
+    --cellCore:          calc(var(--widthCore) + var(--heightCore));
+    --cellCoreHalfUp:    calc(calc(calc(calc(var(--cellCore) * var(--grWhole)) - var(--cellCore)) / var(--grWhole)) + var(--cellCore));
+
+
+
+
+
+
+    --cellGrDwn1:  calc(var(--cellCoreHalfUp) / var(--grWhole));
+    --cellGrDwn2:  calc(var(--cellCore)       / var(--grWhole));
+    --cellGrDwn3:  calc(var(--cellGrDwn1)     / var(--grWhole));
+    --cellGrDwn4:  calc(var(--cellGrDwn2)     / var(--grWhole));
+    --cellGrDwn5:  calc(var(--cellGrDwn3)     / var(--grWhole));
+    --cellGrDwn6:  calc(var(--cellGrDwn4)     / var(--grWhole));
+    --cellGrDwn7:  calc(var(--cellGrDwn5)     / var(--grWhole));
+    --cellGrDwn8:  calc(var(--cellGrDwn6)     / var(--grWhole));
+    --cellGrDwn9:  calc(var(--cellGrDwn7)     / var(--grWhole));
+    --cellGrDwn10: calc(var(--cellGrDwn8)     / var(--grWhole));
+    --cellGrDwn11: calc(var(--cellGrDwn9)     / var(--grWhole));
+    --cellGrDwn12: calc(var(--cellGrDwn10)    / var(--grWhole));
+    --cellGrDwn13: calc(var(--cellGrDwn11)    / var(--grWhole));
+    --cellGrDwn14: calc(var(--cellGrDwn12)    / var(--grWhole));
+    --cellGrDwn15: calc(var(--cellGrDwn13)    / var(--grWhole));
+    --cellGrDwn16: calc(var(--cellGrDwn14)    / var(--grWhole));
+    --cellGrDwn17: calc(var(--cellGrDwn15)    / var(--grWhole));
+
+    
+
+    --cellGrUp1: var(--cellCoreHalfUp);
+    --cellGrUp2: calc(var(--cellCore)  * var(--grWhole));
+    --cellGrUp3: calc(var(--cellGrUp1) * var(--grWhole));
+    --cellGrUp4: calc(var(--cellGrUp2) * var(--grWhole));
+    --cellGrUp5: calc(var(--cellGrUp3) * var(--grWhole));
+    --cellGrUp6: calc(var(--cellGrUp4) * var(--grWhole));
+    --cellGrUp7: calc(var(--cellGrUp5) * var(--grWhole));
+    --cellGrUp8: calc(var(--cellGrUp6) * var(--grWhole));
+
+
+
+
+
+    --tinyText:      var(--cellGrDwn5);
+    --smallText:     calc(var(--tinyText)      + (var(--cellGrDwn17) * 2 ));
+    --articleText:   calc(var(--smallText)     + (var(--cellGrDwn17) * 2 ));
+    --articleTextLg: calc(var(--articleText)   + (var(--cellGrDwn17) * 2 ));
+    --titleText:     calc(var(--articleText)   + (var(--cellGrDwn17) * 8 ));
+    --subtitleText:  calc(var(--articleTextLg) + (var(--cellGrDwn17) * 3 ));
+    --headlineText:  calc(var(--titleText)     + (var(--cellGrDwn17) * 12));
+
+
+
+
+
+
+
+    --grSs11:  calc(var(--gr19) + var(--cellGrDwn8));
+    --grSs29:  calc(var(--gr23) + var(--cellGrDwn8));
+    --grSs40:  calc(var(--gr24) + var(--cellGrDwn8));
+    --grSs46:  calc(var(--gr25) + var(--cellGrDwn8));
+    --grSs64:  calc(var(--cellGrDwn8) + var(--gr26));
+    /*--grSs64:  calc(1px + calc(var(--gr26) + var(--cellGrUp1)) + 1px);*/
+    --grSs76:  calc(var(--gr27) + var(--cellGrDwn8));
+    --grSs105: calc(var(--gr28) + var(--cellGrDwn8));
+    --grSs122: calc(var(--gr29) + var(--cellGrDwn8));
+    --grSs199: calc(var(--gr31) + var(--cellGrDwn8));
+    --grSs275: calc(var(--gr32) + var(--cellGrDwn8));
+    --grSs444: calc(var(--gr34) + var(--cellGrDwn8));
+    --grSs521: calc(var(--gr35) + var(--cellGrDwn8));
+}
+
+
+
+
+*{ margin: 0; padding: 0; }
+
+::-webkit-scrollbar {
+    width: var(--cellGrDwn9);
+    background-color: rgb(204, 204, 204);
+  }
+
+  ::-webkit-scrollbar-thumb{
+      background-color: rgb(119, 119, 119);
+      border-radius: var(--cellGrDwn11);
+  }
+
+body{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+app-root{ grid-area: 1/1/2/2; }
+
+
+
+.tinyText{ font-size: var(--tinyText); }
+
+.smallText{ font-size: var(--smallText); }
+
+.articleText{ font-size: var(--articleText); }
+
+.articleTextLg{ font-size: var(--articleTextLg); }
+
+.titleText{ font-size: var(--titleText); }
+
+.subtitleText{ font-size: var(--subtitleText); }
+
+.headlineText{ font-size: var(--headlineText); }
+
+
+
+
+
+
+
+.text-control-section{
+    margin: 0 auto;
+    width: calc(100% - var(--cellGrDwn1));
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--cellGrUp4), 1fr));
+    grid-auto-rows: var(--cellGrUp1);
+    grid-gap: var(--cellGrDwn3);
+    justify-items: center;
+}
+
+.control-label{
+    width: 100%;
+    display: grid;
+    justify-items: left;
+    grid-template-columns: repeat(auto-fill, var(--cellGrUp3));
+    grid-auto-rows: var(--cellGrDwn4);
+}
+
+.text-control{
+    width: 100%;
+    height: var(--cellGrDwn4);
+    /*background-color: blue;*/
+}
+
+
+
+
+
+
+
+.list-grid{
+    display: grid;
+    width: 100%;
+   /*grid-template-columns: minmax(var(--grSs11), var(--grSs29)) minmax(var(--grSs46), calc(var(--grSs105) * 5)) minmax(var(--grSs29), var(--grSs64));*/
+    grid-template-columns: 1fr;
+    grid-gap: var(--cellGrDwn5);
+}
+
+/*.index-area{
+    align-self: center;
+    justify-self: center;
+}*/
+
+/*.component-area{
+    align-self: center;
+    justify-self: center;
+}*/
+
+.delete-area{
+    /*align-self: center;*/
+    justify-self: center;
+}
+
+
+
+
+
+.control-label-container{
+    width: auto;
+}
+
+.duo-text-control-section{
+    /*margin: 0 auto;*/
+    width: 100%;
+    min-width: var(--grSs46);
+    max-width: calc(var(--grSs105) * 5);
+    /*height: auto;*/
+    display: grid;
+    padding-bottom: var(--cellGrDwn2);
+    grid-template-columns: repeat(auto-fit, minmax(var(--grSs46), calc(var(--grSs105) * 2)));
+    grid-gap: var(--cellGrDwn7);
+    /*grid-auto-flow: column;*/
+    /*grid-template-columns: min-content auto;*/
+    /*grid-gap: var(--cellGrDwn6);*/
+    /*grid-auto-rows: var(--cellGrDwn2);*/
+    /*justify-items: center;*/
+}
+
+.duo-control-label22{
+    width: 100%;
+}
+
+.duo-control-label{
+    width: 100%;
+    min-width: var(--grSs46);
+    max-width: calc(var(--grSs105)*2);
+    display: grid;
+    justify-items: left;
+    grid-row-gap: var(--cellGrDwn9);
+    /*grid-auto-columns: min-content;*/
+    /*grid-auto-rows: auto;*/
+    /*grid-auto-flow: column;*/
+    grid-template-columns: repeat(auto-fit, minmax(var(--grSs46), var(--grSs105)));
+    /*grid-auto-rows: var(--cellGrDwn4);*/
+    /*grid-template-columns: repeat(auto-fill, minmax(var(--grSs64), var(--grSs105)));*/
+    /*grid-template-rows: repeat(auto-fill, minmax(--cellGrDwn3), var(--cellGrDwn1));*/
+   /* grid-template-columns: repeat(auto-fill, var(--cellGrUp3));*/
+    /*grid-template-columns: repeat(auto-fit, minmax(fit-content, var(--cellGrUp3)));*/
+    /*grid-auto-rows: var(--cellGrDwn4);*/
+}
+
+.duo-text-control{
+    width: 100%;
+    /*width: 64px;*/
+    /*background-color: blueviolet;*/
+    /*min-width:var(--grSs76);
+    max-width: var(--grSs105);*/
+    /*height: var(--cellGrDwn4);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 122px){
+
+    @media screen and (min-height: 199px){
+        :root{ --heightScaleNumber: 6.854101966; --tinyText: var(--cellGrDwn7) }
+    }
+
+    @media screen and (min-height: 275px){
+        :root{ --heightScaleNumber: 9.472135955; }
+    }
+
+    @media screen and (min-height: 321px){
+        :root{ --heightScaleNumber: 11.09016994; }
+    }
+
+    @media screen and (min-height: 521px){
+        :root{ --heightScaleNumber: 15.32623792; }
+    }
+
+    @media screen and (min-height: 720px){
+        :root{ --heightScaleNumber: 17.94427191; }
+    }
+
+}
+
+@media screen and (min-width: 199px){
+    :root{ --widthScaleNumber: 6.854101966; }
+}
+
+@media screen and (min-width: 275px){
+    :root{ --widthScaleNumber: 9.472135955; }
+
+    .list-grid{
+        grid-template-columns: minmax(var(--grSs11), var(--grSs29)) minmax(var(--grSs46), calc(var(--grSs105) * 5)) minmax(var(--grSs29), var(--grSs64));
+    }
+}
+
+@media screen and (min-width: 444px){
+    :root{ --widthScaleNumber: 15.32623792; }
+
+    @media screen and (min-height: 444px){
+        :root{ --heightScaleNumber: 17.94427191; }
+    }
+
+    @media screen and (min-height: 720px){
+        :root{ --heightScaleNumber: 24.79837388; }
+    }
+}
+
+@media screen and (min-width: 720px){
+    :root{ --widthScaleNumber: 17.94427191; }
+}
+
+@media screen and (min-width: 842px){
+    :root{ --widthScaleNumber: 24.79837388; --heightScaleNumber: 9.472135955; }
+
+    @media screen and (min-height: 444px){
+        :root{ --heightScaleNumber: 11.09016994; }
+    }
+
+    @media screen and (min-height: 720px){
+        :root{ --heightScaleNumber: 17.94427191; }
+    }
+}
+
+@media screen and (min-width: 1164px){
+
+    @media screen and (min-height: 199px){
+        :root{ --heightScaleNumber: 24.79837388; }
+    }
+
+    @media screen and (min-height: 321px){
+        :root{ --heightScaleNumber: 29.03444185; }
+    }
+}
+
+@media screen and (min-width: 1364px){
+    :root{ --widthScaleNumber: 29.03444185; }
+}
+
+@media screen and (min-width: 1885px){
+    :root{ --widthScaleNumber: 46.97871367 }
+}
