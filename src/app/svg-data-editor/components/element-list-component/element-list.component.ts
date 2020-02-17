@@ -1,6 +1,6 @@
 import { Component, OnInit, forwardRef, Input } from '@angular/core';
 import { FormGroup, FormArray, ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
-import { CreateGraphicElementForm } from '../../functions/form-functions/create-graphic-element-form/create-graphic-element-form';
+import { CreateGraphicElementForm } from '../../functions/create-graphic-element-form';
 
 @Component({
   selector: 'element-list-component',

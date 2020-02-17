@@ -1,6 +1,6 @@
 import { Component, OnInit, Input,forwardRef, OnChanges } from '@angular/core';
-import {OvaadSvgDataObject} from '@interfaces/interfaces';
-import {FormBuilder, FormGroup, FormControl, FormArray, Validators, ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
+import {OvaadSvgDataObject} from '../../../interfaces/interfaces';
+import {FormGroup, FormControl, FormArray, } from '@angular/forms';
 
 @Component({
   selector: 'svg-object-form-component',
@@ -11,7 +11,7 @@ export class SvgObjectFormComponent implements OnInit, OnChanges {
 
   @Input()SvgFormData: FormGroup;
 
-  constructor(private fBuild: FormBuilder) { }
+  constructor() { }
 
   ngOnInit() {
     //this.showData();
@@ -24,21 +24,4 @@ export class SvgObjectFormComponent implements OnInit, OnChanges {
   showData(){ console.log(this.SvgFormData); }
 
   onSubmit(){}
-
-
-
-  /*public onTouched : ()=> void =()=>{};
-
-  writeValue(val: any):void{ val && this.SvgFormData.setValue(val, {emitEvent: false}); console.log(val); }
-
-  registerOnChange(fn: any): void{ this.SvgFormData.valueChanges.subscribe(fn); console.log(fn); }
-
-  registerOnTouched(fn: any): void{ this.onTouched = fn; }
-
-  setDisabledState?(isDisabled: boolean): void{ isDisabled ? this.SvgFormData.disable() : this.SvgFormData.enable(); }
-
-  validate(c: AbstractControl): ValidationErrors | null{
-    return this.SvgFormData.valid ? null : {invalidForm:{valid: false, message: 'field invalid'}};
-  }*/
-
 }

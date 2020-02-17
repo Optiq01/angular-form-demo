@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, forwardRef } from '@angular/core';
 import { FormArray, FormGroup, ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
 
-import { CreateAttributeForm } from '../../functions/form-functions/create-attribute-form/create-attribute-form';
+import { CreateAttributeForm } from '../../functions/create-attribute-form';
 
 @Component({
   selector: 'attribute-list-component',
