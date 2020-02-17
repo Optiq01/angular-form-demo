@@ -1,0 +1,42 @@
+<section [formGroup]="ElementFormData">
+    <article class="text-control-section">
+        <label class="control-label">
+            element:
+            <input type="text" class="text-control" formControlName="element" />
+        </label>
+
+        <label class="control-label">
+            self closing:
+            <input type="text" class="text-control" formControlName="selfClosing" />
+        </label>
+    </article>
+
+    <article>
+        <h3>Attributes</h3>
+        <attribute-list-component formArrayName="attributes"></attribute-list-component>
+    </article>
+
+    <article>
+        <h3>Styles</h3>
+        <style-list-component [StylePropertyListData]="ElementFormData.controls.styles"></style-list-component>
+    </article>
+    
+    <section>
+        <h3>Sub Elements</h3>
+
+        <p *ngIf="ElementFormData.controls.subElements.length === 0">no sub elements</p>
+
+        <article *ngFor="let item of ElementFormData.controls.subElements; let i = index" class="list-grid">
+
+            <p class="index-area">{{i}}</p>
+
+            <element-form-component formGroupName="item" class="component-area"></element-form-component>
+
+            <article class="delete-area">
+                <button>delete element</button>
+            </article>
+            
+        </article>
+        
+    </section>
+</section>
